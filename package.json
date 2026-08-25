@@ -1,5 +1,5 @@
 {
-  "name": "pi-runtime-status",
+  "name": "@vimsucks/pi-runtime-status",
   "version": "0.1.0",
   "description": "Let Pi agents publish and monitor persistent runtime status items.",
   "type": "module",
