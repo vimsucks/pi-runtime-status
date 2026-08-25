@@ -1,0 +1,59 @@
+{
+  "name": "pi-runtime-status",
+  "version": "0.1.0",
+  "description": "Let Pi agents publish and monitor persistent runtime status items.",
+  "type": "module",
+  "license": "MIT",
+  "author": "vimsucks <dev@vimsucks.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vimsucks/pi-runtime-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vimsucks/pi-runtime-status/issues"
+  },
+  "homepage": "https://github.com/vimsucks/pi-runtime-status#readme",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "runtime-status",
+    "background-process",
+    "developer-tools"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "extensions",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.84.2",
+    "@earendil-works/pi-coding-agent": "^0.84.2",
+    "@earendil-works/pi-tui": "^0.84.2",
+    "@types/node": "^24.0.0",
+    "typebox": "^1.0.64",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "rm -rf .test-dist && tsc --noEmit false --outDir .test-dist && node --test .test-dist/tests/*.test.js",
+    "pack:dry-run": "pnpm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "packageManager": "pnpm@11.22.0"
+}
